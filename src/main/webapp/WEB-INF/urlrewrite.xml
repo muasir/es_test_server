@@ -1,0 +1,8 @@
+<urlrewrite>
+    <rule>
+        <name>image redirect</name>
+        <condition name="host" operator="equal">^retellhome.com/bingo-server-2/api/retellmobile/images/stores/*</condition>
+        <from>^/(.*)</from>
+        <to type="permanent-redirect" last="true">https://s3.amazonaws.com/retellmobile/stores/$1</to>
+    </rule>
+</urlrewrite>
